@@ -7,6 +7,10 @@
     <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
     <meta name="generator" content="Hugo 0.101.0">
     <link rel="icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="./dist/css/jsvectormap.css" />
+<script src="./dist/js/jsvectormap.min.js"></script>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+
     
     <title>Lin Lei's airplaine</title>
     
@@ -99,6 +103,7 @@
             <a class="nav-link " href="https://linleidaniele.github.io/year-guada/">Year - guada</a>
           </li>
         </ul>
+        
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success" type="submit">Search</button>
@@ -433,6 +438,42 @@
       </table>
     </div>
   </main>
+  <div class="container p-5 my-5 border" style="padding: 15px;">
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+
+
+<script>
+var xValues = ["China", "France", "Spain", "USA", "Argentina","Japan","Germany","Swedish","Canada","Russia","Italy","North Korean","South Korean","India","UKraine"];
+var yValues = [105, 50, 45, 95, 45,25,70,25,60,85,20,2,50,20,30];
+var barColors = [
+"#add8e6", "#74dcff","#84fff1","#00bfff","#306b84","#4287ff","#4287ff","#2924bd","#5dfffa","#036ba8","#94cff1","#6cd0d7","#68cfff","#1a35ff","#1a53ff","blue"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+    title: {
+      display: true,
+      text: "My Wide Wine Production 2020"
+    }
+  }
+});
+</script>
+</div>
+
+
+
 
   <footer class="pt-4 my-md-5 pt-md-5 border-top">
     <div class="row">
@@ -478,6 +519,7 @@
     </div>
   </footer>
 </div>
+
 
 
 <footer class="container">
